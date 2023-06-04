@@ -1,12 +1,12 @@
 import streamlit as st
 from langchain.llms import OpenAI
 
-st.title('🦜🔗 Quickstart App')
+st.title('🦜🔗 知识库测试')
 
 openai_api_key = st.sidebar.text_input('OpenAI API Key')
 
 def generate_response(input_text):
-  llm = OpenAI(temperature=0.5, openai_api_key=openai_api_key)
+  llm = OpenAI(temperature=0.1, openai_api_key=openai_api_key)
   st.info(llm(input_text))
 
 with st.form('my_form'):
